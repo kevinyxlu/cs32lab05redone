@@ -26,14 +26,15 @@ int main() {
         std::cout << *obj << std::endl;
     }
     */
+  //  theAnswers.createComboDemogData((std::vector<shared_ptr<demogData>>&)theDemogData);
+  //  theAnswers.createComboPoliceData((std::vector<shared_ptr<psData>>&) thePoliceData);
     
-    /*
-    theAnswers.createStateDemogData(theDemogData);
-    theAnswers.createStatePoliceData(thePoliceData);
-    cout << theAnswers << endl;
+   // theAnswers.createStateDemogData(theDemogData);
+  //  theAnswers.createStatePoliceData(thePoliceData);
+  //  cout << theAnswers << endl;
 
 
-
+/*
     cout << "*** the state that needs the most pre-schools**" << endl;
     string needPK = theAnswers.youngestPop();
     cout << *(theAnswers.getStateData(needPK)) << endl;
@@ -60,7 +61,7 @@ int main() {
     theAnswers.createComboPoliceData((std::vector<shared_ptr<psData>>&) thePoliceData);
 
     theAnswers.reportTopTenStatesBP();
-  //  theAnswers.reportTopTenStatesPS();
+    theAnswers.reportTopTenStatesPS();
 
     return 0;
 }

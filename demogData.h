@@ -36,20 +36,20 @@ class demogData : public regionData {
 
     string getName() const { return name; }
     string getState() const { return state; }
-    virtual int getpopOver65() const { return popOver65; }
-    virtual int getpopUnder18() const { return popUnder18; }
-    virtual int getpopUnder5() const { return popUnder5; }
-    virtual int getBAup() const { return popBachelorEduPlus; }
-    virtual int getHSup() const { return popHighSchoolEduPlus; }
-    virtual int getPoverty() const { return popInPoverty; }
+    virtual double getpopOver65() const { return popOver65; }
+    virtual double getpopUnder18() const { return popUnder18; }
+    virtual double getpopUnder5() const { return popUnder5; }
+    virtual double getBAup() const { return popBachelorEduPlus; }
+    virtual double getHSup() const { return popHighSchoolEduPlus; }
+    virtual double getPoverty() const { return popInPoverty; }
     raceDemogData getRace() const { return raceData; }
 
-    virtual double getpopOver65Count() const { return round( ((popOver65 / 100) * totalPopulation2014) ); }
-    virtual double getpopUnder18Count() const { return round( ((popUnder18 / 100) * totalPopulation2014) ); }
-    virtual double getpopUnder5Count() const { return round( ((popUnder5 / 100) * totalPopulation2014) ); }
-    virtual double getBAupCount() const { return round( ((popBachelorEduPlus / 100) * totalPopulation2014) ); }
-    virtual double getHSupCount() const { return round( ((popHighSchoolEduPlus / 100) * totalPopulation2014) ); }
-    virtual double getPovertyCount() const { return round( ((popInPoverty / 100) * totalPopulation2014) ); }
+    virtual int getpopOver65Count() const { return round( ((popOver65 / 100) * totalPopulation2014) ); }
+    virtual int getpopUnder18Count() const { return round( ((popUnder18 / 100) * totalPopulation2014) ); }
+    virtual int getpopUnder5Count() const { return round( ((popUnder5 / 100) * totalPopulation2014) ); }
+    virtual int getBAupCount() const { return round( ((popBachelorEduPlus / 100) * totalPopulation2014) ); }
+    virtual int getHSupCount() const { return round( ((popHighSchoolEduPlus / 100) * totalPopulation2014) ); }
+    virtual int getPovertyCount() const { return round( ((popInPoverty / 100) * totalPopulation2014) ); }
 
     void addOver65(int num) {countOver65 = countOver65 + num;}
     void addUnder18(int num) {countUnder18 = countUnder18 + num;}

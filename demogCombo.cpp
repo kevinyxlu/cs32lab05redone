@@ -18,15 +18,6 @@ void demogCombo::addCounty(shared_ptr<demogData> data)
     countInPoverty = countInPoverty + data->getPovertyCount();
     population = population + data->getPop();
     raceData += data->getRace();
-
-
-    int countyCount = 0;
-    int countOver65 = 0;
-    int countUnder18 = 0;
-    int countUnder5 = 0;
-    int countBachelorEduPlus = 0;
-    int countHighSchoolEduPlus = 0;
-    int countInPoverty = 0;
 }
 
 /* print state data - as aggregate of all the county data */
