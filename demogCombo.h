@@ -26,12 +26,12 @@ class demogCombo : public demogData {
     double getPoverty() const { return popInPoverty; }
     int getCountyCount() const { return countyCount; }
 
-    double getpopOver65Percent() const { return ( ((popOver65 * 100.0) / population) ); }
-    double getpopUnder18Percent() const { return ( ((popUnder18 * 100.0) / population) ); }
-    double getpopUnder5Percent() const { return ( ((popUnder5 * 100.0) / population) ); }
-    double getBAupPercent() const { return ( ((popBachelorEduPlus * 100.0) / population) ); }
-    double getHSupPercent() const { return ( ((popHighSchoolEduPlus * 100.0) / population) ); }
-    double getPovertyPercent() const { return ( ((popInPoverty * 100.0) / population) ); }
+    double getpopOver65Percent() const { return double( (((double)popOver65 / (double)population ) * 100) ); }
+    double getpopUnder18Percent() const { return ( (((double)popUnder18 / (double)population ) * 100) ); }
+    double getpopUnder5Percent() const { return ( (((double)popUnder5 / (double)population ) * 100) ); }
+    double getBAupPercent() const { return ( (((double)popBachelorEduPlus / (double)population ) * 100) ); }
+    double getHSupPercent() const { return ( (((double)popHighSchoolEduPlus / (double)population ) * 100) ); }
+    double getPovertyPercent() const { return (((double)countInPoverty * (double)10000.00) / population) ; }
 
     friend std::ostream& operator<<(std::ostream &out, const demogCombo &SD);
 
