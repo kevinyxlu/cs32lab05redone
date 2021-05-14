@@ -67,7 +67,7 @@ void dataAQ::createComboPoliceDataKey(std::vector<shared_ptr<psData> >& theData)
 void dataAQ::createStateDemogData(std::vector<shared_ptr<demogData>> theData) {
     string stateOfCounty = "";
 
-    //*for each county, find the state that its in. if its state is not already 
+    /for each county, find the state that its in. if its state is not already 
     //created in the map, create a new state. then adds the county to the state*
     for(auto county : theData){
         stateOfCounty = county->getStateName();

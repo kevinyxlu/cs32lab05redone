@@ -19,7 +19,7 @@ class demogData : public regionData {
   public:
     demogData(string inN, string inS, double in65, double in18,
         double in5, int totPop14, double inBach, double inHigh, double inPov, raceDemogData race) :
-            state(inS), popOver65(in65), popUnder18(in18),
+            name(inN), state(inS), popOver65(in65), popUnder18(in18),
             popUnder5(in5), totalPopulation2014(totPop14), popBachelorEduPlus(inBach), popHighSchoolEduPlus(inHigh), popInPoverty(inPov),
             regionData{inN, inS, totPop14} 
             {
@@ -64,7 +64,7 @@ class demogData : public regionData {
     }   
 
 protected:
-    const string name = " NOT RELEVANT ";
+    const string name;
     const string state;
     const double popOver65;
     const double popUnder18;
