@@ -31,12 +31,22 @@ class dataAQ {
     shared_ptr<demogCombo> getComboDemogData(string regionName) { return allComboDemogData[regionName]; }
     shared_ptr<psCombo> getComboPoliceData(string regionName) { return allComboPoliceData[regionName]; }
     
-   friend std::ostream& operator<<(std::ostream &out, const dataAQ &comboData);
+    friend std::ostream& operator<<(std::ostream &out, const dataAQ &comboData);
+    void printAK();
+
+    void getStatesReport(){
+        string state = "";
+        for(map<string, shared_ptr<demogCombo>>::iterator it=allComboDemogData.begin(); it!=allComboDemogData.end() ; it++){
+
+            state = it->first;
+            cout << *(it->second);
+            cout << *(allComboPoliceData[state]) << "\n\n";
+        }
+    }
 
     //this quarter restriction
     private:
        std::map<string, shared_ptr<demogCombo> > allComboDemogData;
-
        std::map<string, shared_ptr<psCombo> > allComboPoliceData;
 
 };
