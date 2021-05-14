@@ -173,7 +173,7 @@ void dataAQ::reportTopTenStatesBP() {
     for(int i = 0 ; i < 10 ; i++){
         cout << stateVec[i]->getName();
         cout << "\nTotal population: " << stateVec[i]->getPop();
-        cout << "\nPercent below poverty: " << stateVec[i]->getPovertyPercent();
+        cout << "\nPercent below poverty: " << stateVec[i]->getPovertyPercent();//ISSUE HERE
         cout << "\nPolice shooting incidents: " << allComboPoliceData[stateVec[i]->getName()]->getNumberOfCases();
         cout << endl;
     }

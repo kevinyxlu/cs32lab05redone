@@ -60,7 +60,7 @@ int main() {
     theAnswers.createComboPoliceData((std::vector<shared_ptr<psData>>&) thePoliceData);
 
     theAnswers.reportTopTenStatesBP();
-    theAnswers.reportTopTenStatesPS();
+  //  theAnswers.reportTopTenStatesPS();
 
     return 0;
 }
